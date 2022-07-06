@@ -5,9 +5,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-def create_app(congigClass = Config):
+
+def create_app(configClass = Config):
     app = Flask(__name__)
-    app.config.from_object(congigClass)
+    app.config.from_object(configClass)
 
     db.init_app(app)
 
